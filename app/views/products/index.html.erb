@@ -1,0 +1,7 @@
+<h2>Product Listing</h2>
+
+<ul style="list-style:none;">
+  <% @products.each do |product| %>
+    <li style="padding: 2px;"><%= link_to "#{product.id}. #{product.name}", product_path(product.id) %> <span><%= "$#{product.price}" %></span></li>
+  <% end %>
+</ul>
